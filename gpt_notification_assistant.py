@@ -1,8 +1,9 @@
+import os
+import openai
 import streamlit as st
-from openai import ChatCompletion
 
-# OpenAI API Key
-openai_api_key = st.secrets["openai_api_key"]
+# Set OpenAI API Key
+openai.api_key = st.secrets["openai_api_key"]
 
 # Function to interact with GPT
 @st.cache(allow_output_mutation=True)
